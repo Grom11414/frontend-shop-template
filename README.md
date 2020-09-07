@@ -1,1 +1,2 @@
-#FRONTEND-SHOP-TEMPLATE САМОСТОЯТЕЛЬНАЯ РАБОТА #1
+# Игорь Бочкарёв SkillUp Front-End Пн/Ср 17:00 19:00
+ Самостоятельная работа по FRONTEND-SHOP-TEMPLATE
