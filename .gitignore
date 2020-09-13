@@ -3,5 +3,6 @@ temp/
 
 # IntellijIdea files
 .idea/
+debug.log
 */scss-comb/
 node_modules/
