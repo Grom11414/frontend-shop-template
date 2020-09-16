@@ -1,19 +1,22 @@
+let buttonsContainer = document.querySelector('.page-content');
 let cartCounterLabel = document.querySelector('#cart-counter');
-let buttonsContainer = document.querySelector('#content-container');
 let cartCount = 0;
 let cartPrice = 0;
 
-function cartBtnHandler(e) {
+let cartBtnHandler = (e) => {
     let target = e.target;
+
     if (target.classList.contains('item-actions__cart')) {
 
-        cartCounterLabel.innerHTML = ++cartCount;
+        cartCounterLabel.innerHTML = `${++cartCount}`;
         if (cartCount === 1) cartCounterLabel.style.display = 'block';
 
-        const mockData = +target.parentElement.previousElementSibling.innerHTML.
-        replace('$', '').
-        replace('</sup>', '').
-        replace('<sup>', '.');
+        const mockData = +target.
+        parentElement.
+        previousElementSibling.
+        innerHTML.
+        replace(/^\$(\d+)\s\D+(\d+).*$/u, '$1.$2');
+
 
         cartPrice = Math.round((cartPrice + mockData) * 100) / 100;
         let restoreHTML = target.innerHTML;
